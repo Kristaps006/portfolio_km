@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /* we get this number by dividing 100% by 16px */ }
+
+body {
+  box-sizing: border-box; }
+
+.header {
+  background-color: red;
+  height: 100vh; }
+
+.header__navigation {
+  text-transform: uppercase; }
+  .header__navigation__li {
+    list-style-type: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: aliceblue;
+    margin-top: 2rem;
+    margin-right: 2rem; }
+    .header__navigation__li:first-child {
+      margin-left: 2rem; }

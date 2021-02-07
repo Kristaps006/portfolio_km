@@ -1,0 +1,21 @@
+.header {
+  background-color: $color-test;
+  height: 100vh;
+}
+
+.header__navigation {
+  text-transform: uppercase;
+
+  &__li {
+    list-style-type: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: aliceblue;
+    margin-top: 2rem;
+    margin-right: 2rem;
+
+    &:first-child {
+      margin-left: 2rem;
+    }
+  }
+}
