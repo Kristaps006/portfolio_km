@@ -1,18 +1,28 @@
 .header {
-  background-color: $color-primary;
   height: 100vh;
+  position: relative;
+  background-color: $color-primary;
+  box-shadow: inset 30rem 6rem 0 white;
+  @include clearfix;
 }
 
 .header__navigation {
+  padding-bottom: 1.5rem;
+  margin-top: 3rem;
+  margin-right: 1rem;
+  display: inline-block;
+  float: right;
   text-transform: uppercase;
-  font-family: "PT Mono";
   font-weight: 400;
+  color: black;
+  background-color: #ffd803;
+  border-radius: 3px;
 
   &__li {
-    list-style-type: none;
     display: inline-block;
+    list-style-type: none;
     font-size: 1.5rem;
-    color: aliceblue;
+    color: black;
     margin-top: 2rem;
     margin-right: 2rem;
 
@@ -22,39 +32,17 @@
   }
 }
 
-.main {
-  margin: 0 auto;
-  max-width: 114rem;
-  margin-top: 8rem;
-  font-family: "PT Mono";
-  @include clearfix;
-
-  &_1 {
-    float: left;
-    background-color: $color-secondary;
-    width: 30rem;
-    margin-left: 3rem;
-    height: 40rem;
-    position: relative;
-    box-shadow: 0 1.5rem 4rem;
-  }
-
-  &_2 {
-    float: left;
-    background-color: burlywood;
-    width: 30rem;
-    margin-left: 30rem;
-    height: 40rem;
-    box-shadow: 0 1.5rem 4rem;
-  }
-  &_vertical_text {
-    text-transform: uppercase;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
+.heading__box__logo {
+  position: relative;
+  &-link,
+  &-git {
     position: absolute;
-    top: 2rem;
-    right: 0;
-    color: aliceblue;
-    transform: translateX(1.1rem);
+    top: -4rem;
+    width: 3rem;
+    height: 4rem;
+  }
+
+  &-link {
+    margin-left: 4rem;
   }
 }
