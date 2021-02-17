@@ -1,131 +1,67 @@
-*,
-*::after,
-*::before {
+* {
   margin: 0;
-  padding: 0;
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-  font-family: "PT Mono"; }
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
 
 html {
-  font-size: 62.5%;
-  /* we get this number by dividing 100% by 16px */ }
+  box-sizing: inherit;
+  font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
-
-.about {
-  height: 100vh;
-  margin: 2rem;
-  text-align: center;
+  font-family: "PT Mono", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: #232946;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
   position: relative;
-  border-radius: 3px; }
-  .about-part {
-    display: inline-block;
-    width: 95%;
-    height: 90%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #97a4b5; }
+  z-index: 1; }
 
-h2 {
-  color: white;
-  margin-top: 10rem;
-  font-size: 4rem; }
+.top-nav {
+  list-style: none;
+  font-size: 2rem;
+  margin: 0 auto; }
+  .top-nav__items {
+    background-color: #e06245;
+    display: inline-block;
+    padding: 0 2rem;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; }
+  .top-nav__link {
+    text-decoration: none;
+    color: #fff; }
 
 .header {
-  height: 100vh;
-  position: relative;
-  overflow: hidden; }
-  .header::before {
-    content: "";
-    position: absolute;
-    background-size: cover;
-    top: 5rem;
-    right: 0;
-    left: 20rem;
-    bottom: 0;
-    background-color: #bae8e8;
-    height: 100%;
-    width: 100%;
-    border-radius: 3px;
-    z-index: -1; }
+  max-width: 120rem;
+  min-height: 50rem;
+  position: relative; }
   .header::after {
     content: "";
-    display: table;
-    clear: both; }
+    position: absolute;
+    top: 4rem;
+    right: 0rem;
+    background-color: #eeeddf;
+    width: 60%;
+    height: 80%;
+    z-index: -1;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-box-shadow: 7px -4px 6px -2px rgba(1, 1, 1, 0.9);
+    box-shadow: 7px -4px 6px -2px rgba(1, 1, 1, 0.9); }
 
-.header__navigation {
-  padding-bottom: 1.5rem;
-  margin-top: 3rem;
-  margin-right: 1rem;
-  display: inline-block;
+.nav {
   float: right;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: black;
-  background-color: #ffd803;
-  border-radius: 3px; }
-  .header__navigation__li {
-    display: inline-block;
-    list-style-type: none;
-    font-size: 1.5rem;
-    color: black;
-    margin-top: 2rem;
-    margin-right: 2rem; }
-    .header__navigation__li:first-child {
-      margin-left: 2rem; }
+  margin-top: 2rem;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border-radius: 2px; }
 
-.heading__box {
-  text-align: center; }
-  .heading__box-h1 {
-    margin-top: 4rem;
-    font-size: 3rem; }
-  .heading__box-paragraph {
-    margin-top: 3rem;
-    padding: 3rem;
-    color: #2d334a;
-    font-size: 1.5rem;
-    font-weight: 700; }
-
-.heading__box__logo {
-  position: absolute;
-  top: 21rem; }
-  .heading__box__logo-link, .heading__box__logo-git {
-    width: 3rem;
-    height: 3rem;
-    margin-left: 0.1rem; }
-
-.row {
-  max-width: 100%;
-  clear: both;
-  padding-left: 13rem;
-  padding-top: 10rem;
-  z-index: 1; }
-  .row::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .row__main-1, .row__main-2 {
-    border-radius: 3px;
-    float: left; }
-  .row__main-1 {
-    max-width: 50rem;
-    margin-right: 16rem;
-    height: 25rem;
-    margin-top: 6rem;
-    background-color: #eff6e0; }
-  .row__main-2 {
-    width: 25rem;
-    height: 32rem;
-    margin-bottom: 5rem; }
-
-.main-2_img {
-  width: 100%;
-  height: 100%;
-  background-color: #bae8e8;
-  background-image: url("https://images.pexels.com/photos/374563/pexels-photo-374563.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-  background-blend-mode: screen;
-  opacity: 0.7; }
+.introduction {
+  background-color: grey;
+  display: block;
+  clear: both; }
