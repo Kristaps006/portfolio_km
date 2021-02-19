@@ -1,3 +1,6 @@
+:root {
+  --color-primary: #eebbc3; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -18,3 +21,40 @@ body {
   min-height: 100vh;
   position: relative;
   background-color: #232946; }
+
+.header {
+  max-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 10vh 90vh;
+  grid-template-columns: 150px 1fr min-content; }
+
+.navigation {
+  grid-area: 1/2/2/4;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 5rem; }
+  .navigation__list {
+    list-style: none; }
+  .navigation__items {
+    display: inline-block; }
+  .navigation__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    font-size: 1.3rem; }
+
+.email {
+  background-color: goldenrod;
+  grid-column: 3/4; }
+
+.introduction {
+  background-color: beige;
+  grid-row: 2/3;
+  grid-column: 1/3; }
+
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
