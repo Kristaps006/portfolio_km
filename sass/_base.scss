@@ -1,5 +1,8 @@
 :root {
   --color-primary: #eebbc3;
+  --color-secondary: #ddf8e8;
+  --color-background: #232946;
+  --color-white: #fffffe;
 }
 
 * {
@@ -22,7 +25,6 @@ body {
   font-family: "PT Mono", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  min-height: 100vh;
   position: relative;
   background-color: #232946;
 }

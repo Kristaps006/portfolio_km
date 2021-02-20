@@ -14,8 +14,16 @@
   <body>
     <header class="header">
       <div class="media">
-        <span class="media__linkedin"><a href="#" class="media__link">Linked In</a></span>
-        <span class=media__github"><a href="#" class="media__link">GitHub</a></span>
+        <span class="media__linkedin"><a href="#" class="media__link">
+          <svg class="icon">
+            <use xlink:href="css/img/sprite.svg#icon-linkedin"></use>
+          </svg>
+        </a></span>
+        <span class=media__github"><a href="#" class="media__link">
+          <svg class="icon">
+            <use xlink:href="css/img/sprite.svg#icon-github"></use>
+          </svg>
+        </a></span>
       </div>
       <nav class="navigation">
         <ul class="navigation__list">
@@ -32,14 +40,34 @@
             <a href="#" class="navigation__link">Contact</a>
           </li>
           <li class="navigation__items">
-            <a href="#" class="navigation__link">Resume</a>
+            <button class="navigation__btn">Resume</button>
           </li>
         </ul>
       </nav>
       <div class="email">
-       <spam class="email__item"><a href="mailto:" class="email__link">kristaps006@gmail.com</a></spam>
+       <a href="mailto:" class="email__link">kristaps006@gmail.com</a>
       </div>
-      <div class="introduction">Introduction</div>
+      <div class="introduction">
+          <h1 class="introduction__heading">
+            <span class="introduction__font-small" >Hi, my name is </span><br>
+            <span class="introduction__font-large">Kristaps Mincans</span>
+          </h1>
+            <p class="introduction__text-1">
+              SEO strategy Consultant | On-Page | Off-Page SEO | Digital Marketing | Business Development 
+            </p>
+            <p class="introduction__text-2">
+              Kehittamo wanted to use illustration as visual metaphor for the various services they provide to 
+              Kehittamo wanted to use illustration as visual metaphor for the various services they provide to 
+            </p>
+          <div class="introduction__cta">
+            <button class="introduction__cta-btn">
+              Get in Touch
+            </button>
+          </div>
+      </div>
     </header>
   </body>
+  <svg class="search__icon">
+    <use xlink:href="css/img/sprite.svg#icon-magnifying-glass"></use>
+  </svg>
 </html>
