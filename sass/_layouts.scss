@@ -1,7 +1,7 @@
 .header {
   min-height: 100%;
   max-width: 120rem;
-  margin-top: 1rem;
+  transform: translateY(3rem);
   display: grid;
   grid-template-rows: 10% 90%;
   grid-template-columns: 300px 1fr min-content;
@@ -11,14 +11,14 @@
   grid-area: 1/2/2/4;
   display: flex;
   align-items: center;
-  justify-content: end;
-  padding-right: 5rem;
+  justify-content: flex-end;
 
   &__list {
     list-style: none;
   }
   &__items {
     display: inline-block;
+    margin-right: 3rem;
   }
 
   &__link {
@@ -27,6 +27,14 @@
     color: var(--color-primary);
     font-size: 1.3rem;
     cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      animation: pulsnav 1s infinite;
+    }
+    &:active {
+      color: var(--color-secondary);
+    }
   }
 
   &__btn {
@@ -35,10 +43,14 @@
     font-weight: 200;
     color: var(--color-primary);
     border-radius: 3px;
-    padding: 0.5rem;
+    padding: 0.5rem 3rem;
     margin-left: 5px;
     background-color: var(--color-background);
     border-color: var(--color-secondary);
+    display: inline-block;
+    &:hover {
+      animation: puls 1s infinite;
+    }
   }
 }
 
@@ -58,6 +70,12 @@
     text-decoration: none;
     cursor: pointer;
     color: var(--color-secondary);
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--color-teriary);
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -76,7 +94,7 @@
 
   &__font-small {
     font-size: clamp(2rem, 0.5vw, 0.5rem);
-    color: var(--color-secondary);
+    color: #b8c1ec;
   }
   &__font-large {
     font-size: clamp(4rem, 7vw, 7rem);
@@ -98,15 +116,27 @@
 
   &__cta {
     margin-top: 3rem;
+
     &-btn {
       font-family: inherit;
       font-size: 2rem;
       font-weight: 200;
-      color: var(--color-primary);
+      color: var(--color-secondary);
       border-radius: 3px;
       padding: 1rem;
       background-color: var(--color-background);
-      border-color: var(--color-secondary);
+      border-color: #b8c1ec;
+      border-width: 3px;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: translateY(-0.3px);
+        box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+        color: var(--color-teriary);
+      }
+      &:active {
+        color: var(--color-primary);
+      }
     }
   }
 }
@@ -125,14 +155,54 @@
   display: block;
   transform: translateX(-4rem);
   width: 14rem;
-  height: 1px;
+  height: 3px;
   margin: 0 auto;
-  background-color: antiquewhite;
+  background-color: #b8c1ec;
 }
 
 .icon {
   height: 3rem;
   width: 3rem;
-  fill: var(--color-secondary);
+  fill: #b8c1ec;
   stroke-width: 3px;
+
+  &:hover {
+    animation: puls 1s infinite;
+    fill: var(--color-secondary);
+  }
+}
+
+@keyframes puls {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+@keyframes pulsnav {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.1);
+    color: var(--color-secondary);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
 }
