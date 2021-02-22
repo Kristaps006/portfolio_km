@@ -4,7 +4,23 @@
   --color-background: #232946;
   --color-white: #fffffe;
   --color-teriary: #b8c1ec;
+
+  //Font
+
+  --regular-text:font-size: clamp(0.5rem, 1vw, 1.5rem);
+
+
+
+
+
 }
+
+$bp-largest: 75em; //1200px
+$bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; //500px
+
 
 * {
   margin: 0;
@@ -20,7 +36,13 @@
 html {
   box-sizing: inherit;
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  @media only screen and (max-width: $bp-large) {
+    font-size: 40%;
+  }
+  
 }
+
 
 body {
   font-family: "PT Mono", sans-serif;
@@ -28,4 +50,5 @@ body {
   line-height: 1.6;
   position: relative;
   background-color: #232946;
+ 
 }
