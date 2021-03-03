@@ -1,1 +1,1 @@
-console.log("dog");
+"use strict";

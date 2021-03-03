@@ -15,11 +15,6 @@
 
 }
 
-$bp-largest: 75em; //1200px
-$bp-large: 68.75em; //1100px
-$bp-medium: 56.25em; //900px
-$bp-small: 37.5em; // 600px
-$bp-smallest: 31.25em; //500px
 
 
 * {
@@ -37,18 +32,40 @@ html {
   box-sizing: inherit;
   font-size: 62.5%;
   scroll-behavior: smooth;
-  @media only screen and (max-width: $bp-large) {
-    font-size: 40%;
-  }
+  height: 100%;
   
 }
-
 
 body {
   font-family: "PT Mono", sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  min-height: 100%;
   position: relative;
-  background-color: #232946;
- 
+}
+body::before{
+  content: "";
+  height: 100%;
+  position:absolute;
+  top: 2rem;
+  left: 2rem;
+  right:2rem;
+  background-color: #02020B;
+  border-radius: 3px;
+  
+}
+
+/* <body class="container">
+    <div class="logo"></div>
+    <div class="nav"></div>
+    <div class="email"></div>
+    <div class="about"></div>
+    <div class="experience"></div>
+    <div class="footer"></div>
+ */
+.container{
+
+  display:grid;
+  grid-template-rows:10vh repeat(4, 1fr) 100px;
+
 }
