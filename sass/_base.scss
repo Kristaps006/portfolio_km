@@ -43,7 +43,7 @@ body {
   min-height: 100%;
   position: relative;
 }
-body::before{
+/* body::before{
   content: "";
   height: 100%;
   position:absolute;
@@ -53,19 +53,12 @@ body::before{
   background-color: #02020B;
   border-radius: 3px;
   
-}
+} */
 
-/* <body class="container">
-    <div class="logo"></div>
-    <div class="nav"></div>
-    <div class="email"></div>
-    <div class="about"></div>
-    <div class="experience"></div>
-    <div class="footer"></div>
- */
-.container{
 
-  display:grid;
-  grid-template-rows:10vh repeat(4, 1fr) 100px;
-
+  .container{
+    display:grid;
+    grid-template-rows:10vh 90vh repeat(2, minmax(min-content, 90vh)) 200px;
+    grid-template-columns: [logo-start] 100px[logo-end middle-start] minmax(min-content, 1fr) [middle-end email-start] 10px [email-end];
+  
 }
